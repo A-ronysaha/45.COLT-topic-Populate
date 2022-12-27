@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Element</title>
+</head>
+<body>
+    <h1><%= farm.name %> </h1>
+    <h2>Create of New element</h2>
+    <form action="/farms/<%=farm._id %>/product" method="post">
+        <label for="name">New element :</label>
+        <input type="text" id="name" name="name">
+
+        <label for="price">Price in Rs:</label>
+        <input type="number" id="price" name="price">
+
+        <label for="category">Select the category</label>
+        <select name="category" id="category">
+            <option value="fruit">Fruit</option>
+            <option value="vegetable">Vegetable</option>
+            <option value="diary">Diary</option>
+            <option value="dryfood">Dry Food</option>
+        </select>
+        <button>SUBMIT</button>
+    </form>
+    <a href="/farms/<%= farm._id %> ">Back to that FARM</a>
+</body>
+</html>

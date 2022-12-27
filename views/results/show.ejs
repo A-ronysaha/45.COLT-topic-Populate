@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%=show.name%>
+    </title>
+</head>
+
+<body>
+    <h1>Name of the element::--<%= show.name %>
+    </h1>
+    <ul>
+        <li>Price is Rs: <%= show.price %>/-</li>
+        <li>Category is : <a href="/sample?category=<%= show.category %>"><%= show.category %></a></li>
+        <li><a href="/farms/<%= show.farm._id %>"><%=show.farm.name  %> </a></li>
+    </ul>
+
+    <a href="/sample">Back to list</a>
+    <a href="/sample/<%= show._id %>/edit ">Edit element</a>
+    <form action="/sample/<%=show._id%>?_method=delete" method="post">
+        <button>DELETE</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list of element</title>
+</head>
+
+
+<body>
+    
+    <h1><%= category %>  Elements :--</h1>
+    <ul>
+        <% for(let x of list) {%> 
+
+            <li><a href="/sample/<%= x.id %>"> <%= x.name %></a> </li>
+
+            <% } %> 
+    </ul>
+    <a href="/sample/new">Create new element</a>
+    <% if(category !== 'All') {%> 
+        <a href="/sample">All Products</a>
+        <% } %> 
+
+</body>
+</html>
